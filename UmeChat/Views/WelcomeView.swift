@@ -10,30 +10,21 @@ import SwiftUI
 struct WelcomeView: View {
     var body: some View {
             VStack {
+                Spacer()
                 HStack {
                     Image("wmeChat")
                         .resizable()
-                        .frame(maxWidth: 40, maxHeight: 40)
-                    Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+                        .frame(maxWidth: 48, maxHeight: 48)
+                    Text("WmeChat")
                         .font(.title)
                         .bold()
                 }
+                Spacer()
                 VStack(spacing: 10) {
-                    Button("Register") {
-                        /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/
-                    }
-                    .padding()
-                    .background(.blue)
-                    .foregroundColor(.white)
-                    
-                    Button("Log In") {
-
-                    }
-                    .padding()
-                    .background(.blue)
-                    .foregroundColor(.white)
-
+                    PrimaryButton(text: "Log In")
+                    SecondaryButton(text: "Register")
                 }
+                .padding(.bottom, 24)
             }
     }
 }

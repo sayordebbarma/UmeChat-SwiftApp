@@ -12,7 +12,7 @@ struct LogInView: View {
     @State private var password: String = ""
     
     var body: some View {
-        VStack {
+        VStack(spacing: 24) {
             VStack {
                 TextField("Enter your email", text: $email)
                     .padding()
@@ -26,15 +26,7 @@ struct LogInView: View {
                     .cornerRadius(2)
             }
             
-            Button("Log In") {
-                
-            }
-            .padding()
-            .background(.blue)
-            .cornerRadius(10)
-            .foregroundColor(.white)
-            .padding(.top, 24)
-
+            PrimaryButton(text: "Log In")
         }
         .padding()
     }
