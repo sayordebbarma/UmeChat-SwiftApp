@@ -1,0 +1,6 @@
+framework module Pods_UmeChat {
+  umbrella header "Pods-UmeChat-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -17,6 +17,7 @@
 		2874708D29D1CBD30000D020 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2874708C29D1CBD30000D020 /* ChatView.swift */; };
 		289065D229D34AAB007B33D3 /* SecondaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289065D129D34AAB007B33D3 /* SecondaryButton.swift */; };
 		28A5984E29D348C5007ED942 /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A5984D29D348C5007ED942 /* PrimaryButton.swift */; };
+		507075DD239821AE077F326F /* Pods_UmeChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77A67E39244D5D11D5C3A91A /* Pods_UmeChat.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,9 @@
 		2874708C29D1CBD30000D020 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 		289065D129D34AAB007B33D3 /* SecondaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryButton.swift; sourceTree = "<group>"; };
 		28A5984D29D348C5007ED942 /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
+		77A67E39244D5D11D5C3A91A /* Pods_UmeChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UmeChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		992D2C0317E673E1410B04D4 /* Pods-UmeChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UmeChat.release.xcconfig"; path = "Target Support Files/Pods-UmeChat/Pods-UmeChat.release.xcconfig"; sourceTree = "<group>"; };
+		DE6F6A1F1593C34D693005A3 /* Pods-UmeChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UmeChat.debug.xcconfig"; path = "Target Support Files/Pods-UmeChat/Pods-UmeChat.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				507075DD239821AE077F326F /* Pods_UmeChat.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -49,6 +54,8 @@
 			children = (
 				2874707529D1CB030000D020 /* UmeChat */,
 				2874707429D1CB030000D020 /* Products */,
+				686F52A45DD479A9D5DA0C66 /* Pods */,
+				2DF7CB801651433EAC5A70D5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,6 +108,24 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		2DF7CB801651433EAC5A70D5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				77A67E39244D5D11D5C3A91A /* Pods_UmeChat.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		686F52A45DD479A9D5DA0C66 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DE6F6A1F1593C34D693005A3 /* Pods-UmeChat.debug.xcconfig */,
+				992D2C0317E673E1410B04D4 /* Pods-UmeChat.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -108,9 +133,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2874708129D1CB050000D020 /* Build configuration list for PBXNativeTarget "UmeChat" */;
 			buildPhases = (
+				22AD5BB9F1146DC955906B85 /* [CP] Check Pods Manifest.lock */,
 				2874706F29D1CB030000D020 /* Sources */,
 				2874707029D1CB030000D020 /* Frameworks */,
 				2874707129D1CB030000D020 /* Resources */,
+				39CAD86EF57D3BF9C50D7146 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -165,6 +192,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		22AD5BB9F1146DC955906B85 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-UmeChat-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		39CAD86EF57D3BF9C50D7146 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UmeChat/Pods-UmeChat-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UmeChat/Pods-UmeChat-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-UmeChat/Pods-UmeChat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2874706F29D1CB030000D020 /* Sources */ = {
@@ -301,6 +370,7 @@
 		};
 		2874708229D1CB050000D020 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DE6F6A1F1593C34D693005A3 /* Pods-UmeChat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -330,6 +400,7 @@
 		};
 		2874708329D1CB050000D020 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 992D2C0317E673E1410B04D4 /* Pods-UmeChat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
